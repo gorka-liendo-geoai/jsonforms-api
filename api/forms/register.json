@@ -1,36 +1,27 @@
 {
-  "type": "register",
-  "title": "Crear Cuenta",
-  "description": "Completa el formulario para registrarte",
-  "fields": [
-    {
-      "name": "name",
-      "type": "text",
-      "label": "Nombre Completo",
-      "required": true,
-      "placeholder": "Juan Pérez"
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nombre Completo",
+      "minLength": 1
     },
-    {
-      "name": "email",
-      "type": "email",
-      "label": "Email",
-      "required": true,
-      "placeholder": "tu@email.com"
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
     },
-    {
-      "name": "password",
-      "type": "password",
-      "label": "Contraseña",
-      "required": true,
-      "placeholder": "••••••••"
+    "password": {
+      "type": "string",
+      "title": "Contraseña",
+      "minLength": 6
     },
-    {
-      "name": "confirmPassword",
-      "type": "password",
-      "label": "Confirmar Contraseña",
-      "required": true,
-      "placeholder": "••••••••"
+    "confirmPassword": {
+      "type": "string",
+      "title": "Confirmar Contraseña",
+      "minLength": 6
     }
-  ],
-  "submitText": "Crear Cuenta"
+  },
+  "required": ["name", "email", "password", "confirmPassword"],
+  "additionalProperties": false
 }
