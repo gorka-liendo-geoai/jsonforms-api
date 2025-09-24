@@ -1,0 +1,22 @@
+{
+  "type": "login",
+  "title": "Iniciar Sesión",
+  "description": "Ingresa tus credenciales para acceder",
+  "fields": [
+    {
+      "name": "email",
+      "type": "email",
+      "label": "Email",
+      "required": true,
+      "placeholder": "tu@email.com"
+    },
+    {
+      "name": "password",
+      "type": "password",
+      "label": "Contraseña",
+      "required": true,
+      "placeholder": "••••••••"
+    }
+  ],
+  "submitText": "Iniciar Sesión"
+}
